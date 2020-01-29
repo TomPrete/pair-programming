@@ -13,17 +13,3 @@ def assign(arr):
       final_pairings.append(pairs)
       pairs = []
   return final_pairings
-
-
-
-# with open("pairs.csv", 'r') as pairs:
-#   csv_pairs = csv.DictReader(pairs)
-#   pairs_dict = []
-#   for row in csv_pairs:
-#     print(row['student'])
-
-
-
-print('----------- Partners------------')
-print(assign(everyone))
-
