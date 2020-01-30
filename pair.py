@@ -1,13 +1,9 @@
 import csv
 
-
-
-
 class Pair:
 
   def __init__(self, pair):
     self.pair = pair
-
 
 class HashPair:
 
