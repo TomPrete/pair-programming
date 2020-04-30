@@ -5,7 +5,7 @@ import re
 
 
 
-everyone = ['Jonathan Almoradie', 'Saumya Bajracharya', 'Val Gabriel', 'Beknazar Zhumabaev', 'Stephen Smith', 'Alexander Taylor', 'Pavel Bogdanov', 'Daniel Tolczyk', 'Justin Savage', 'Kenneth Malley', 'Jorge Silva', 'Bryan Gentz', 'Bryan Lubay', 'Ian Roberson', 'Sunny Noeun', 'Richard Maldonado', 'Kevin Maguire', 'Xuan Liu', 'Chase Cowart', 'Devin Winslow']
+everyone = ['Osei Amoabin','Mackey White','Daniel Lindberg','Jason Pul','Dan Whaley','Joel Cetti','Adam Torres','Aaron Wood','Carole Ouedraogo','Chase Thorpe','Coby Leuschke','Eric Murphy','Steve Woll','Chris Howell','Julian West','Kenisha Stills','Michael Whalon', 'N/A']
 
 class Cohort:
 
@@ -57,7 +57,7 @@ class Cohort:
       existing_hash = int(pair_object.hash_pair)
       for pair_possibility in self.new_pair_posibilities_hash:
         if existing_hash == int(pair_possibility):
-          if int(pair_object.count) == 3:
+          if int(pair_object.count) == 4:
             return self.check_possibilities()
     self.update_pairs()
     return self.pair_programming
@@ -96,7 +96,7 @@ class Cohort:
 
   # Saves Partners and How many times they've been partners
   def save_new_pairs(self):
-    with open('pairs.csv', mode='w') as pair_csv:
+    with open('lima_pairs.csv', mode='w') as pair_csv:
       pair_writer = csv.writer(pair_csv)
       for pair in self.final_pairs:
         pair_writer.writerow([pair.hash_pair, pair.count])
@@ -120,7 +120,7 @@ class Cohort:
     for hash in hash_dict:
       print(f"{hash},{hash_dict[hash]}")
 
-kilo = Cohort('kilo')
-kilo.convert_student_to_hash()
-# kilo.get_existing_partners()
-kilo.check_possibilities()
+lima = Cohort('lima')
+lima.convert_student_to_hash()
+# lima.get_existing_partners()
+lima.check_possibilities()

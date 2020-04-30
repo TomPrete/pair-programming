@@ -14,7 +14,7 @@ class HashPair:
   @classmethod
   def get_pairs(cls):
     add_pairs = []
-    with open('pairs.csv', mode='r') as pairs_file:
+    with open('lima_pairs.csv', mode='r') as pairs_file:
       csv_reader = csv.reader(pairs_file)
       for row in csv_reader:
         if row:
